@@ -28,7 +28,7 @@ public class JpaApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		List<Order> orderList = orderRepository.findOrderListByUserId(7L);
 		orderList.forEach(System.out::println);
-
+		orderRepository.findOrderListByUserIdNative(7L);
 		List<User> userList = userRepository.findUserListByProductId(3L);
 		userList.forEach(System.out::println);
 	}

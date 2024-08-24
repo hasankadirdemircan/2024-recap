@@ -13,4 +13,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
     List<User> findUserListByProductId(@Param("productId") Long productId);
 
     //TODO: ben User tablosundan username ve email, Order tablosundan da price bilgisini dönsün istiyorum. Bunu nasıl yapabilirim? (Dto)
+
+    //TODO: iki sql'i de native olarak tekrar yaz. hem JPQL hem NATIVE
 }
