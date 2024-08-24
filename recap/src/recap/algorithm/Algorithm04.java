@@ -1,4 +1,4 @@
-package recap;
+package recap.algorithm;
 
 import java.util.Arrays;
 

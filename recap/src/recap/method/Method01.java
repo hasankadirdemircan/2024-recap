@@ -1,4 +1,4 @@
-package recap;
+package recap.method;
 
 public class Method01 {
 

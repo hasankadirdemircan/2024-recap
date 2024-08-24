@@ -1,4 +1,4 @@
-package recap;
+package recap.constructor;
 
 public class Constructor02 {
 

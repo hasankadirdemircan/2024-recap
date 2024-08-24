@@ -1,4 +1,4 @@
-package recap;
+package recap.io;
 
 import java.io.FileReader;
 import java.io.FileWriter;

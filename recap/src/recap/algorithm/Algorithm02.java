@@ -1,4 +1,4 @@
-package recap;
+package recap.algorithm;
 
 public class Algorithm02 {
     public static void main(String[] args) {
