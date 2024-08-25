@@ -8,7 +8,6 @@ import org.springframework.data.repository.query.Param;
 
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
-    //verilen userId'ye göre satın aldığı ürünleri dönsün.
     @Query("Select o from Order o where o.userId = :userId")
     List<Order> findOrderListByUserId(@Param("userId") Long userId);
 

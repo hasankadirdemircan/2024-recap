@@ -1,5 +1,7 @@
 package com.example.jpa;
 
+import com.example.jpa.dto.IUserOrderDTO;
+import com.example.jpa.dto.UserOrderDTO;
 import com.example.jpa.model.Order;
 import com.example.jpa.model.User;
 import com.example.jpa.repository.OrderRepository;
@@ -31,6 +33,13 @@ public class JpaApplication implements CommandLineRunner {
 		orderRepository.findOrderListByUserIdNative(7L);
 		List<User> userList = userRepository.findUserListByProductId(3L);
 		userList.forEach(System.out::println);
+
+		List<UserOrderDTO> userOrderDTOList = userRepository.findUserOrderListByProductId(3L);
+		userOrderDTOList.forEach(System.out::println);
+
+		List<User> userList1 = userRepository.findUserListByProductIdNative(3L);
+		List<IUserOrderDTO> userOrderDTOList1 = userRepository.findUserOrdersByProductIdNative(3L);
+		System.out.println();
 	}
 
 	private void userSave() {
