@@ -1,33 +1,17 @@
 package com.example.jpa;
 
-import com.example.jpa.dto.IUserOrderDTO;
-import com.example.jpa.dto.UserOrderDTO;
-import com.example.jpa.model.Order;
-import com.example.jpa.model.User;
-import com.example.jpa.repository.OrderRepository;
-import com.example.jpa.repository.UserRepository;
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JpaApplication implements CommandLineRunner {
+public class JpaApplication {
 
-	@Autowired
-	private UserRepository userRepository;
-
-	@Autowired
-	private OrderRepository orderRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(JpaApplication.class, args);
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
+	/*public void run(String... args) throws Exception {
 		List<Order> orderList = orderRepository.findOrderListByUserId(7L);
 		orderList.forEach(System.out::println);
 		orderRepository.findOrderListByUserIdNative(7L);
@@ -95,5 +79,5 @@ public class JpaApplication implements CommandLineRunner {
 		orderRepository.save(order3);
 		orderRepository.save(order4);
 		orderRepository.save(order5);
-	}
+	}*/
 }
